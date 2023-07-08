@@ -1,4 +1,4 @@
-- HTML, basic
+# HTML, basic
 
 Getting started with HTML
 - What is HTML
