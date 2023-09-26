@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label.checkbox-label {
+            display: block;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="file"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form  onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+
+            <label>Feedback Options:</label>
+            <label class="checkbox-label">Excellent</label>
+                <input type="checkbox" name="feedbackOption" value="excellent"> 
+            <label class="checkbox-label">Good</label>
+                <input type="checkbox" name="feedbackOption" value="good"> 
+            <label class="checkbox-label">Average</label>
+                <input type="checkbox" name="feedbackOption" value="average"> 
+            <label class="checkbox-label">Poor</label>
+                <input type="checkbox" name="feedbackOption" value="poor"> 
+
+            <label for="file">Upload a File:</label>
+            <input type="file" id="file" name="file">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var feedbackOptions = document.querySelectorAll('input[name="feedbackOption"]:checked').length;
+            var fileInput = document.getElementById("file").value;
+
+            if (name === "" || email === "" || feedbackOptions === 0) {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+
+            if (fileInput && !fileInput.match(/\.(jpg|jpeg|png|gif|pdf)$/i)) {
+                alert("Please upload a valid image (jpg, jpeg, png, gif) or PDF file.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
