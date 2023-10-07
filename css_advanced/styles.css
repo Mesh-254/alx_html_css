@@ -266,6 +266,7 @@ body {
   margin: 0%;
 }
 
+/* HEADER SECTION */
 header {
   width: 1103.41px;
   height: 40.46px;
@@ -304,6 +305,7 @@ header .logo {
   color: #c271ff;
 }
 
+/* BANNER SECTION */
 .banner-section {
   background-image: url("./images/Object.png");
   color: var(--color-white);
@@ -311,6 +313,7 @@ header .logo {
   flex-direction: column;
   align-items: center;
   margin-top: -120px;
+  padding: 0;
 }
 
 .heading {
@@ -418,6 +421,7 @@ button {
   border-radius: 50%;
 }
 
+/* TESTIMONIAL SECTION */
 .testimonial-section {
   background-color: #c271ff;
   height: 392px;
@@ -449,6 +453,8 @@ button {
   letter-spacing: 0px;
   text-align: left;
 }
+
+/* *****VIDEO SECTION***** */
 
 .video-section {
   display: flex;
@@ -521,4 +527,94 @@ button {
 }
 #rating p {
   color: #c271ff;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 24px;
+}
+
+/* MEMBERSHIP SECTION */
+.membership {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%;
+  height: 502px;
+  background: rgba(7, 22, 41, 1);
+}
+.membership h2 {
+  margin-top: 90px;
+  color: white;
+}
+.dots {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  color: #ffffff;
+}
+
+.dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 257px;
+  height: 153px;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+.smile-image {
+  width: 43.67px;
+  height: 35.35px;
+}
+
+/* FAQ SECTION */
+
+.FAQ-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 920px;
+  height: 707px;
+  margin: 0 auto;
+}
+.FAQ-section h1 {
+  font-family: Source Sans Pro;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 75px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 136px;
+  height: 75px;
+  left: 407px;
+  margin-top: 6%;
+}
+.row {
+  display: flex;
+  gap: 7%;
+  margin-top: 3%;
+  height: auto;
+}
+
+.question h3 {
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(7, 22, 41, 1);
+  width: 145px;
+  height: 20px;
+}
+
+.question p {
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(7, 22, 41, 0.5016);
+  height: 192px;
 }
